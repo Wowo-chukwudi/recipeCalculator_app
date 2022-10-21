@@ -35,7 +35,20 @@ class _RecipeDetailState extends State<RecipeDetail> {
             widget.recipe.label,
             style: const TextStyle(fontSize: 18),
           ),
-          //TODO: Add Expanded
+
+          //Added an Expanded Widget to display ingredients list
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.all(7.0),
+              itemCount: widget.recipe.ingredients.length,
+              itemBuilder: (BuildContext context, int index) {
+                final ingredients = widget.recipe.ingredients[index];
+
+                return Text(
+                    '${ingredients.quantity} ${ingredients.measure} ${ingredients.name}');
+              },
+            ),
+          ),
           //TODO: Add Slider here
         ],
       )),
