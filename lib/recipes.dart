@@ -4,7 +4,7 @@ class Recipe {
 
   Recipe({required this.label, required this.imageUrl});
 
-  // TODO: Add List<Recipe> here
+  // This is the list of recipes
 
   static List<Recipe> samples = [
     Recipe(
